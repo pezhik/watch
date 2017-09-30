@@ -1,0 +1,42 @@
+<html>
+	<head>
+		<title>250 худших лучших фильмов по версии VSFC</title>
+		<link rel="stylesheet" href="css/vsfc.css" type="text/css" media="all" />	
+		<link rel="stylesheet" href="css/rating.css" type="text/css" media="all" />
+		<META HTTP-EQUIV="Expires" CONTENT="-1">
+		<META http-equiv="content-type" content="text/html; charset=windows-1251">
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script src="scripts/jquery.tablesorter.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript"> 
+			$(document).ready(function(){ 
+	                        $("#mytable").tablesorter({
+					headers: { 0: { sorter: 'rating'} },
+					sortList: [[0,0]]
+				}); 
+	                }); 
+		</script>
+
+		<nav id="topNav">
+			<ul>
+	       		<li><a href="/">Поиск</a></li>
+				<li><a href="top.html">Top 250</a></li>
+				<li><a href="best.html">Critics Choice</a></li>
+			</ul>
+		</nav>
+
+		<div class="title">250 худших фильмов по версии VSFC</div>
+		<div class="date">Обновлен 11/03/2015
+		</div><div class="my">
+		<table id="mytable" class="tablesorter" align=center width="100%">
+			<thead><tr>
+				<th width=10%><center><b>Место</b></center></th>
+				<th><center><b>Название</b></center></th>
+				<th width=10%><center><b>Год</b></center></th>
+				<th width=10%><center><b>Комм.</b></center></th>
+				<th width=10%><center><b>Балл</b></center></th>
+				<th width=10%><center><b>Голосов</b></center></th>
+			</tr></thead>
+			<tbody>
+	

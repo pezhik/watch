@@ -1,0 +1,70 @@
+.menu a {
+	font-size: 14px;
+	text-align: left;
+	padding: 0 0 0 2em;
+	text-decoration: none;
+ 	color: red;
+	font-weight: bold;
+}
+
+
+.logo {
+	display: inline-block;
+	zoom: 1; 
+	display:block; margin:0 auto;
+	width: 300px;
+	padding: 0 .5em 0em;
+}	
+
+.searchblock{
+	text-align: center;
+	margin: 1em;	
+}
+
+.results{
+	margin: 1em 1em;
+	font-size: 14px;   
+	height : 450px; 
+	overflow : auto;	
+}
+
+.loading {
+	display: inline-block;
+        zoom: 1;
+        display:block; margin:0 auto;
+        padding: 5em;
+
+}
+
+.date {
+	font-size: 10px;
+	text-align: center;
+	padding: 0 0 0 13em;
+}
+
+
+a {
+	color: #380B61;
+	
+}
+
+.lighted{
+ 	background: #fc0;
+	font-weight: bold;
+}
+
+h3 {
+	text-align: center;
+ 	color: grey;
+}
+
+/* base nav styles */
+nav { display:block; margin:0 auto 15px; border:1px solid #222; position:relative; background-color:#6a6a6a; font:14px Tahoma, Sans-serif; }
+nav ul { padding:0; margin:0; }
+nav li { position:relative; float:left; list-style-type:none; }
+nav ul:after { content:"."; display:block; height:0; clear:both; visibility:hidden; }
+nav li a { display:block; padding:10px 20px; border-left:1px solid #999; border-right:1px solid #222; color:#eee; text-decoration:none; }
+nav li a:focus { outline:none; text-decoration:underline; }
+nav li:first-child a { border-left:none; }
+nav li.last a { border-right:none; }
+nav a span { display:block; float:right; margin-left:5px; }

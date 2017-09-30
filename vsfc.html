@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<title>VSFC Поиск</title>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<link rel="stylesheet" href="css/vsfc.css" type="text/css" media="all" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+</head>
+<body>
+	<script type=text/javascript>
+	$(document).ready(function(){
+		jQuery.ajax({
+				url: "date.php", 
+				success:function(data){
+					$('#date').html(data);					
+				}
+			});
+    
+    $("input").bind("keydown", function(event) {
+        	var keycode = (event.keyCode ? event.keyCode : (event.which ? event.which : event.charCode));
+      		if (keycode == 13) { 
+		      	$("#start").click();    
+      		}
+   	}); 
+
+
+		$("#start").click(function(){
+			s=$('#search_text').attr("value");
+			if (s.length==0) {$('#response').html('<h3>Введите критерий поиска</h3>');return;}
+			var s='search='+ s;
+			$('#response').html('<img class="loading" src="res/loading.gif"/>');
+			jQuery.ajax({
+				url: "search.php", 
+				data: s,
+				type: 'POST',
+				success:function(data){
+					$('#response').html(data);					
+				},
+				error: function(){$('#response').html('<h3>Связь с сервером нарушена. Попробуйте позднее.</h3>');}
+			});
+		});                                              
+
+	});
+	</script>
+	<nav id="topNav">
+		<ul>
+       		<li><a href="top.html">Top 250</a></li>
+			<li><a href="bottom.html">Bottom 250</a></li>
+			<li><a href="best.html">Critics Choice</a></li>
+		</ul>
+	</nav>
+	<img class="logo" src="res/logo.png"/>	
+	<div class="date" id="date"></div>
+	<div class="searchblock"> 
+		<input type="text" id="search_text" name="search_text">
+		<button type="button" id="start">Поиск</button>
+	</div>
+	<div id="response" class="results"><div>
+</body>
+</html>

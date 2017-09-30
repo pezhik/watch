@@ -1,0 +1,66 @@
+
+.names {
+	float: left;
+	height: 560px;
+	width: 20%;
+	overflow:auto;
+
+	font-family: Georgia, Times, serif;
+
+}
+
+.names td {
+ 	display:block;
+	text-decoration:none; 
+	color:#000000; 
+	background-color:#FFFFFF; 
+	line-height:30px;
+        border-bottom-style:solid; 
+	border-bottom-width:1px; 
+	border-bottom-color:#CCCCCC; 
+	padding-left:0px; 
+	cursor:pointer; 
+	font-size: 8pt;
+}
+
+.names td:hover {
+        background-color:#CCCCCC; 
+}
+
+.movies {
+	height: 560px;
+	width: 80%;
+	overflow:auto;	
+	padding-bottom: 15px;
+
+	font-family: Georgia, Times, serif;
+	font-size: 7pt;
+	color: #000000;
+}
+
+.movies td {
+        border-bottom-style:solid; 
+	border-bottom-width:1px; 
+	border-bottom-color:#CCCCCC; 
+
+}	
+
+.movies td a{
+	text-decoration: none;
+	color: #363659;
+}
+
+
+ 
+.wrapper{
+ 	padding: 2px;
+	float:left;
+	width: 100%;
+	
+}
+
+table {
+ 	margin-left: 15px;
+}
+
+
